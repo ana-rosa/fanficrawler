@@ -1,0 +1,21 @@
+from django.db import models
+
+
+class Fanfic(models.Model):
+    link = models.URLField(max_length=200) // Para URLs
+    title = models.CharField(max_length=200) // Texto com um número limitado de caracteres.
+    category = models.CharField(max_length=200)
+    fandom = models.CharField(max_length=200)
+    ficwriter = models.ForeignKey('auth.User', on_delete=models.CASCADE) //  remove um autor e junto com ele suas fics
+    sinopse = models.TextField() //   Para textos longos, sem um limite.
+    rated =  models.CharField(max_length=200)
+    language =  models.CharField(max_length=200)
+    ship =  models.CharField(max_length=200)
+    chapter = IntegerField()
+    words = IntegerField()
+    reviews = IntegerField()
+    favs = IntegerField()
+    follows = IntegerField()
+    update = DateField() // Para data sem horas
+    published = DateField()
+    text = models.TextField()
