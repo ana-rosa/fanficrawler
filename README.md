@@ -11,7 +11,12 @@ $ pip install -r requirements.txt
 
 Para rodar o crawler e raspar os metadados das fanfics, exportando para um arquivo CSV, execute:
 ```
-$ scrapy crawl ffnet -t csv -o ficteste.csv
+$ scrapy crawl ffnet -t csv -o fanfics.csv
 ```
 
+Para importar os dados do csv gerados anteriormente no banco da aplicação, execute:
+```
+python manage.py runscript ficimporter --script-args fanfics.csv "Harry Potter"
+```
+Substitua `"Harry Potter"` pela categoria das fanfics do arquivo passado.
 
