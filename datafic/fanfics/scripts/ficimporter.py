@@ -2,7 +2,7 @@ import csv
 import time
 import sys
 
-from fanficrawler.models import FandomCategory, Ficwriter, Fanfic, Fandom, Category
+from fanfics.models import FandomCategory, Ficwriter, Fanfic, Fandom, Category
 
 
 def run(csv_filename, category_name, *args):
@@ -20,7 +20,7 @@ def run(csv_filename, category_name, *args):
                 title = line.get('title', ''),
                 rated= line.get('rated', ''),
                 genre= line.get('genre', ''),
-                reviews= (line.get('reviews', '') or '').replace(',', '') or None,# remove vírgulas como separador decimal do FFN
+                reviews= (line.get('reviews', '') or '').replace(',', '') or None,
                 favs= (line.get('favorites', '') or '').replace(',', '') or None,
                 follows= (line.get('follows', '') or '').replace(',', '') or None,
                 update= (line.get('updated', '') or '').replace(',', '') or None,

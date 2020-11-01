@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class FanficrawlerConfig(AppConfig):
+class FanficsConfig(AppConfig):
     name = 'fanficrawler'

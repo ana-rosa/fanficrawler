@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="fm">
+    <h2>{{ fandom.name }}</h2>
+    
+    <div class="row">
+    <div class="col-md-6">
+    <div class="fm-inner">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <b class="title">Fanfic Count:</b>
+                <span id="fanfic-count">{{ fandom.fics_count }}</span>
+            </li>
+            <li class="list-group-item">
+                <b class="title">Language Count:</b>
+                <span id="language-count">{{ fandom.languages_count }}</span>
+            </li>
+            <li class="list-group-item">
+                <b class="title">Most Popular Language:</b>
+                <span id="most-popular-language-name">{{ fandom.most_popular_language.language__name }}</span>
+                <span id="most-popular-language-count">({{ fandom.most_popular_language.language_count }})</span>
+            </li>
+            <li class="list-group-item">
+                <b class="title">Ficwriter who most wrote:</b>
+                <span id="ficwriter-most-wrote-title">{{ fandom.ficwriter_who_most_wrote.ficwriter__name }}</span>
+                <span id="ficwriter-most-wrote-count">({{ fandom.ficwriter_who_most_wrote.ficwriter_count }})</span>
+            </li>
+            <li class="list-group-item">
+                <b class="title">Longest Fanfic (in words):</b>
+                <span id="longest-fanfic-words-title">{{ fandom.longest_fanfic_by_words.title }}</span>
+                <span id="longest-fanfic-words-count">({{ fandom.longest_fanfic_by_words.words }})</span>
+            </li>
+            <li class="list-group-item">
+                <b class="title">Most Commented Fanfic:</b>
+                <span id="most-commented-fanfic-title">{{ fandom.most_commented_fanfic.title }}</span>
+                <span id="most-commented-fanfic-count">({{ fandom.most_commented_fanfic.reviews }})</span>
+            </li>
+            <li class="list-group-item">
+                <b class="title">Most Popular Genre:</b>
+                <span id="most-popular-genre-name">{{ fandom.most_popular_genre.genre }}</span>
+                <span id="most-popular-genre-count">({{ fandom.most_popular_genre.genre_count }})</span>
+            </li>
+            <li class="list-group-item">
+                <b class="title">Most Popular Rating:</b>
+                <span id="most-popular-rated-name">{{ fandom.most_popular_rated.rated }}</span>
+                <span id="most-popular-rated-count">({{ fandom.most_popular_rated.rated_count }})</span>
+            </li>
+        </ul>
+    </div>
+    </div>
+    </div>
+{% endblock content %}
