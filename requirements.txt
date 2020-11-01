@@ -1,1 +1,4 @@
-Scrapy
+scrapy
+django
+django-extensions
+psycopg2
