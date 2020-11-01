@@ -25,7 +25,7 @@ SECRET_KEY = '&9tvem6$o$ixgn3^0*+^aygg(n828pz@ih%_=o5^$_o#5zs%m&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'anarosa.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'anarosa.pythonanywhere.com']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'fanficrawler',
+    'fanfics',
     'django_extensions',
 ]
 

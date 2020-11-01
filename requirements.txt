@@ -2,3 +2,4 @@ scrapy
 django
 django-extensions
 psycopg2
+Werkzeug

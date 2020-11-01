@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="fm">
+    <h2>{{ language.name }}</h2>
+    
+    <div id="featured" class="row">
+    <div class="col-md-6">
+    <div class="fm-inner">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <b class="title">Fanfic Count:</b>
+                <span id="fanfic-title">{{ language.fics_count }}</span>
+            </li>
+        <li class="list-group-item">
+            <b class="title">Ficwriter who most wrote:</b>
+            <span id="ficwriter-most-wrote-title">{{ language.ficwriter_who_most_wrote.ficwriter__name }}</span>
+            <span id="ficwriter-most-wrote-count">({{ language.ficwriter_who_most_wrote.ficwriter_count }})</span>
+        </li>
+         <li class="list-group-item">
+            <b class="title">Longest Fanfic (in words):</b>
+            <span id="longest-fanfic-words-title">{{ language.longest_fanfic_by_words.title }}</span>
+            <span id="longest-fanfic-words-count">({{ language.longest_fanfic_by_words.words }})</span>
+        </li> 
+         <li class="list-group-item">
+            <b class="title">Most Commented Fanfic:</b>
+            <span id="most-commented-fanfic-title">{{ language.most_commented_fanfic.title }}</span>
+            <span id="most-commented-fanfic-count">({{ language.most_commented_fanfic.reviews }})</span>
+        </li>
+         <li class="list-group-item">
+            <b class="title">Most Popular Genre:</b>
+            <span id="most-popular-genre-name">{{ language.most_popular_genre.genre }}</span>
+            <span id="most-popular-genre-count">({{ language.most_popular_genre.genre_count }})</span>
+        </li>
+         <li class="list-group-item">
+            <b class="title">Most Popular Rated:</b>
+            <span id="most-popular-rated-name">{{ language.most_popular_rated.rated }}</span>
+            <span id="most-popular-rated-count">({{ language.most_popular_rated.rated_count }})</span>
+        </li>
+        <!--<div class="detail mb-1">
+            <span class="title">Fandoms Count:</span>
+            <span class="fandoms-count">20</span>
+        </div>
+        <div class="detail mb-1">
+            <span class="title">Ficwriter Count:</span>
+            <span class="ficwriter-count">46.5K</span>
+        </div>
+        -->
+    </div>
+    </div>
+</div>
+{% endblock content %}
